@@ -1,8 +1,8 @@
 <?php
 
-Route::get('/',[\App\Http\Controllers\WebsiteController::class,'home']);
-
-
+Route::get('/',[\App\Http\Controllers\WebsiteController::class,'home'])->name('website.home');
+Route::view('/about','about')->name('website.about');
+Route::view('/contact','contact')->name('website.contact');
 
 Auth::routes();
 

@@ -35,9 +35,9 @@ Author URL: http://w3layouts.com
 				<li><a href="#"><span class="fa fa-vimeo"></span></a> </li>
 		</div>
 		<div class="accounts col-lg-9 col-6">
-				<li class="top_li"><span class="fa fa-mobile"></span><a href="tel:+142 5897555">+142 5897555</a> </li>
-				<li class="top_li1"><a href="#">Login</a></li>
-				<li class="top_li2"><a href="#">Register</a></li>
+				<li class="top_li"><span class="fa fa-mobile"></span>+142 5897555 </li>
+                <li class="top_li1"><a href="{{ route('login') }}">Login</a></li>
+				<li class="top_li2"><a href="{{ route('register') }}">Register</a></li>
 		</div>
 
 	</header>
@@ -49,7 +49,7 @@ Author URL: http://w3layouts.com
 <section class="w3l-bootstrap-header">
   <nav class="navbar navbar-expand-lg navbar-light py-lg-2 py-2">
     <div class="container">
-      <a class="navbar-brand" href="index.html"><span class="fa fa-home"></span> Estate Agent</a>
+      <a class="navbar-brand" href="{{route('website.home') }}"><span class="fa fa-home"></span> Estate Agent</a>
       <!-- if logo is image enable this
     <a class="navbar-brand" href="#index.html">
         <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
@@ -62,17 +62,15 @@ Author URL: http://w3layouts.com
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link @if(request()->is('/')) active @endif" href="{{ route('website.home') }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" href="services.html">Services</a>
+            <a class="nav-link @if(request()->is('about')) active @endif" href="{{ route('website.about') }}">About</a>
           </li>
 
+
           <li class="nav-item mr-0">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link @if(request()->is('contact')) active @endif" href="{{ route('website.contact') }}">Contact</a>
           </li>
         </ul>
 
@@ -88,22 +86,7 @@ Author URL: http://w3layouts.com
 <!-- grids block 5 -->
 <section class="w3l-footer-29-main" id="footer">
   <div class="footer-29">
-    <div class="grids-forms-1 pb-5">
-    <div class="container">
-  <div class="grids-forms">
-      <div class="main-midd">
-          <h4 class="title-head">Newsletter – Get Updates & Latest News</h4>
 
-      </div>
-      <div class="main-midd-2">
-          <form action="#" method="post" class="rightside-form">
-              <input type="email" name="email" placeholder="Enter your email">
-              <button class="btn" type="submit">Subscribe</button>
-          </form>
-      </div>
-    </div>
-  </div>
-  </div>
       <div class="container pt-5">
 
           <div class="d-grid grid-col-4 footer-top-29">
@@ -131,14 +114,7 @@ Author URL: http://w3layouts.com
                       <li><a href="contact.html">Support</a></li>
                   </ul>
               </div>
-              <div class="footer-list-29 footer-3">
-                  <div class="properties">
-                      <h6 class="footer-title-29">Featured Properties</h6>
-                      <a href="#"><img src="assets/images/g7.jpg" class="img-responsive" alt=""><p>We Are Leading International Consultiing Agency</p></a>
-                      <a href="#"><img src="assets/images/g8.jpg" class="img-responsive" alt=""><p>Digital Marketing Agency all the foundational tools</p></a>
-                      <a href="#"><img src="assets/images/g9.jpg" class="img-responsive" alt=""><p>Doloremque velit sapien labore eius itna</p></a>
-                  </div>
-              </div>
+
               <div class="footer-list-29 footer-4">
                   <ul>
                       <h6 class="footer-title-29">Quick Links</h6>

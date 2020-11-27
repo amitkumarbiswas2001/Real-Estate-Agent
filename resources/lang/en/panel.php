@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'site_title' => 'Agent a Real Estate',
+    'site_title' => 'Estate Agent',
 ];
