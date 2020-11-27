@@ -113,4 +113,7 @@ class Property extends Model implements HasMedia
 
         return $files;
     }
+
+
+
 }

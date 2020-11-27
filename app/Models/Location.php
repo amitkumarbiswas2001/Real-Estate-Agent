@@ -87,4 +87,17 @@ class Location extends Model implements HasMedia
     {
         return $this->belongsTo(Country::class, 'country_id');
     }
+
+    public function properties()
+    {
+        return $this->hasMany(Property::class, 'location_id');
+    }
+
+
+    public function getListingsAttribute()
+    {
+        return $this->properties->count();
+    }
+
+
 }
